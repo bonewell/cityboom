@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		F623339E218F8B7E00647BAA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F623339D218F8B7E00647BAA /* main.swift */; };
-		F62333AB218F8BA800647BAA /* CityBoomTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62333AA218F8BA800647BAA /* CityBoomTest.swift */; };
+		F62333AB218F8BA800647BAA /* WorldTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62333AA218F8BA800647BAA /* WorldTest.swift */; };
+		F697F4B821920562006BC1FA /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FFFAAE2190DB2300CE9CE7 /* World.swift */; };
+		F697F4BC21920AB0006BC1FA /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = F697F4BB21920AB0006BC1FA /* City.swift */; };
+		F697F4BE219210D1006BC1FA /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = F697F4BB21920AB0006BC1FA /* City.swift */; };
+		F6FFFAAF2190DB2300CE9CE7 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FFFAAE2190DB2300CE9CE7 /* World.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,8 +31,10 @@
 		F623339A218F8B7E00647BAA /* CityBoom */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CityBoom; sourceTree = BUILT_PRODUCTS_DIR; };
 		F623339D218F8B7E00647BAA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F62333A8218F8BA800647BAA /* CityBoomTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityBoomTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F62333AA218F8BA800647BAA /* CityBoomTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBoomTest.swift; sourceTree = "<group>"; };
+		F62333AA218F8BA800647BAA /* WorldTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTest.swift; sourceTree = "<group>"; };
 		F62333AC218F8BA800647BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F697F4BB21920AB0006BC1FA /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		F6FFFAAE2190DB2300CE9CE7 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				F623339D218F8B7E00647BAA /* main.swift */,
+				F6FFFAAE2190DB2300CE9CE7 /* World.swift */,
+				F697F4BB21920AB0006BC1FA /* City.swift */,
 			);
 			path = CityBoom;
 			sourceTree = "<group>";
@@ -78,7 +86,7 @@
 		F62333A9218F8BA800647BAA /* CityBoomTest */ = {
 			isa = PBXGroup;
 			children = (
-				F62333AA218F8BA800647BAA /* CityBoomTest.swift */,
+				F62333AA218F8BA800647BAA /* WorldTest.swift */,
 				F62333AC218F8BA800647BAA /* Info.plist */,
 			);
 			path = CityBoomTest;
@@ -173,6 +181,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F623339E218F8B7E00647BAA /* main.swift in Sources */,
+				F6FFFAAF2190DB2300CE9CE7 /* World.swift in Sources */,
+				F697F4BC21920AB0006BC1FA /* City.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +190,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F62333AB218F8BA800647BAA /* CityBoomTest.swift in Sources */,
+				F697F4B821920562006BC1FA /* World.swift in Sources */,
+				F62333AB218F8BA800647BAA /* WorldTest.swift in Sources */,
+				F697F4BE219210D1006BC1FA /* City.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
