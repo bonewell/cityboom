@@ -32,7 +32,7 @@ class WorldTest: XCTestCase {
         XCTAssertEqual(world.findCity("Moscow")!, City(1, "Moscow"));
     }
 
-    func testPerformanceExample() {
+    func testPerformanceIsCity() {
         let earth = World(["moscow": City(1, "Moscow"),
                            "irkutsk": City(2, "Irkutsk"),
                            "sofia": City(3, "Sofia")])

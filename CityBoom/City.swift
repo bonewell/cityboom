@@ -18,6 +18,6 @@ class City: Equatable {
     }
 
     static func == (lhs: City, rhs: City) -> Bool {
-        return lhs.id == rhs.id;
+        return lhs.id == rhs.id && lhs.name == rhs.name;
     }
 }
