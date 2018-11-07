@@ -9,6 +9,7 @@
 import Foundation
 
 class Chain {
+    var lastId: Int = 0
     var cities: [Int: City]
     
     init() {
@@ -24,6 +25,11 @@ class Chain {
     }
     
     func add(_ city: City) {
+        lastId = city.id;
         cities[city.id] = city;
+    }
+    
+    func last() -> City? {
+        return cities[lastId];
     }
 }

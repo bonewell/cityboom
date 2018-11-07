@@ -15,6 +15,9 @@
 		F697F4C02192B424006BC1FA /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F697F4BF2192B424006BC1FA /* Chain.swift */; };
 		F697F4C12192B424006BC1FA /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F697F4BF2192B424006BC1FA /* Chain.swift */; };
 		F697F4C32192B450006BC1FA /* ChainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F697F4C22192B450006BC1FA /* ChainTest.swift */; };
+		F697F4C52193608D006BC1FA /* StitchInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F697F4C42193608D006BC1FA /* StitchInspector.swift */; };
+		F697F4C62193608D006BC1FA /* StitchInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F697F4C42193608D006BC1FA /* StitchInspector.swift */; };
+		F697F4C8219360AC006BC1FA /* StitchInspectorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F697F4C7219360AC006BC1FA /* StitchInspectorTest.swift */; };
 		F6FFFAAF2190DB2300CE9CE7 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FFFAAE2190DB2300CE9CE7 /* World.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,8 @@
 		F697F4BB21920AB0006BC1FA /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		F697F4BF2192B424006BC1FA /* Chain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
 		F697F4C22192B450006BC1FA /* ChainTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainTest.swift; sourceTree = "<group>"; };
+		F697F4C42193608D006BC1FA /* StitchInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StitchInspector.swift; sourceTree = "<group>"; };
+		F697F4C7219360AC006BC1FA /* StitchInspectorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StitchInspectorTest.swift; sourceTree = "<group>"; };
 		F6FFFAAE2190DB2300CE9CE7 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +90,7 @@
 				F6FFFAAE2190DB2300CE9CE7 /* World.swift */,
 				F697F4BB21920AB0006BC1FA /* City.swift */,
 				F697F4BF2192B424006BC1FA /* Chain.swift */,
+				F697F4C42193608D006BC1FA /* StitchInspector.swift */,
 			);
 			path = CityBoom;
 			sourceTree = "<group>";
@@ -95,6 +101,7 @@
 				F62333AA218F8BA800647BAA /* WorldTest.swift */,
 				F62333AC218F8BA800647BAA /* Info.plist */,
 				F697F4C22192B450006BC1FA /* ChainTest.swift */,
+				F697F4C7219360AC006BC1FA /* StitchInspectorTest.swift */,
 			);
 			path = CityBoomTest;
 			sourceTree = "<group>";
@@ -190,6 +197,7 @@
 				F623339E218F8B7E00647BAA /* main.swift in Sources */,
 				F697F4C02192B424006BC1FA /* Chain.swift in Sources */,
 				F6FFFAAF2190DB2300CE9CE7 /* World.swift in Sources */,
+				F697F4C52193608D006BC1FA /* StitchInspector.swift in Sources */,
 				F697F4BC21920AB0006BC1FA /* City.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,8 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F697F4C8219360AC006BC1FA /* StitchInspectorTest.swift in Sources */,
 				F697F4B821920562006BC1FA /* World.swift in Sources */,
 				F697F4C12192B424006BC1FA /* Chain.swift in Sources */,
+				F697F4C62193608D006BC1FA /* StitchInspector.swift in Sources */,
 				F62333AB218F8BA800647BAA /* WorldTest.swift in Sources */,
 				F697F4C32192B450006BC1FA /* ChainTest.swift in Sources */,
 				F697F4BE219210D1006BC1FA /* City.swift in Sources */,
