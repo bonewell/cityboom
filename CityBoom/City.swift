@@ -8,7 +8,7 @@
 
 import Foundation
 
-class City: Equatable {
+class City: Equatable, Hashable {
     let id: Int
     let name: String
     
@@ -19,5 +19,10 @@ class City: Equatable {
 
     static func == (lhs: City, rhs: City) -> Bool {
         return lhs.id == rhs.id && lhs.name == rhs.name;
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+        hasher.combine(name)
     }
 }

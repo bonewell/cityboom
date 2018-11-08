@@ -44,7 +44,7 @@ while (name != "exit") {
         continue;
     }
 
-    if (!inspector.verify(last: chain.last()!, next: city!)) {
+    if (!StitchInspector.verify(last: chain.last()!, next: city!)) {
         print("Sorry! Name of the city should start from another letter.");
         continue;
     }

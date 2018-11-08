@@ -31,6 +31,20 @@ class WorldTest: XCTestCase {
     func testFindKnownCity() {
         XCTAssertEqual(world.findCity("Moscow")!, City(1, "Moscow"));
     }
+    
+    func testGetCitiesByFirstLetter() {
+        let earth = World(["moscow": City(1, "Moscow"),
+                           "kiev": City(2, "Kiev")]);
+        XCTAssertEqual(earth.getCitiesByFirstLetter("m"),
+                       Set<City>([City(1, "Moscow")]));
+    }
+    
+    func testGetCitiesByFirstUpperLetter() {
+        let earth = World(["moscow": City(1, "Moscow"),
+                           "kiev": City(2, "Kiev")]);
+        XCTAssertEqual(earth.getCitiesByFirstLetter("M"),
+                       Set<City>([City(1, "Moscow")]));
+    }
 
     func testPerformanceIsCity() {
         let earth = World(["moscow": City(1, "Moscow"),
@@ -38,6 +52,19 @@ class WorldTest: XCTestCase {
                            "sofia": City(3, "Sofia")])
         self.measure {
             XCTAssertTrue(earth.isCity("Irkutsk"));
+        }
+    }
+    
+    func testPerformanceGetCitiesByFirstUpperLetter() {
+        let earth = World(["moscow": City(1, "Moscow"),
+                           "kiev": City(2, "Kiev"),
+                           "irkutsk": City(3, "Irkutsk"),
+                           "sofia": City(4, "Sofia"),
+                           "minsk": City(5, "Minsk")]);
+        self.measure {
+            XCTAssertEqual(earth.getCitiesByFirstLetter("m"),
+                           Set<City>([City(1, "Moscow"),
+                                      City(5, "Minsk")]));
         }
     }
 

@@ -22,4 +22,14 @@ class World {
     func findCity(_ name: String) -> City? {
         return cities[name.lowercased()];
     }
+    
+    func getCitiesByFirstLetter(_ letter: Character) -> Set<City> {
+        let letterLowercased: Character? = String(letter).lowercased().first;
+
+        let cities = self.cities.filter({(key: String, value: City) -> Bool in
+            return key.first == letter || key.first == letterLowercased;
+        });
+
+        return Set<City>(cities.values);
+    }
 }

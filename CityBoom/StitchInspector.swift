@@ -9,15 +9,7 @@
 import Foundation
 
 class StitchInspector {
-    func verify(last: City, next: City) -> Bool {
-        return getLastLetter(last.name.lowercased()) == getFirstLetter(next.name.lowercased());
-    }
-    
-    private func getLastLetter(_ name: String) -> Character {
-        return name[name.index(before: name.endIndex)];
-    }
-    
-    private func getFirstLetter(_ name: String) -> Character {
-        return name[name.startIndex];
+    static func verify(last: City, next: City) -> Bool {
+        return last.name.lowercased().last == next.name.lowercased().first;
     }
 }
