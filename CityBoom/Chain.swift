@@ -32,4 +32,8 @@ class Chain {
     func last() -> City? {
         return cities[lastId];
     }
+    
+    func all() -> Set<City> {
+        return Set<City>(cities.values);
+    }
 }

@@ -22,7 +22,7 @@ class City: Equatable, Hashable {
     }
     
     func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-        hasher.combine(name)
+        hasher.combine(id);
+        hasher.combine(name);
     }
 }

@@ -38,6 +38,10 @@ class ChainTest: XCTestCase {
     func testGetLastForEmptyChain() {
         XCTAssertNil(Chain().last());
     }
+    
+    func testAllCities() {
+        XCTAssertEqual(chain.all(), Set<City>([City(2, "Sofia")]));
+    }
 
     func testPerformanceIsUsed() {
         let longchain = Chain([1: City(1, "Moscow"),
@@ -48,4 +52,12 @@ class ChainTest: XCTestCase {
         }
     }
 
+    func testPerformanceAllCities() {
+        let longchain = Chain([1: City(1, "Moscow"),
+                              2: City(2, "Sofia"),
+                              3: City(3, "Irkutsk")]);
+        self.measure {
+            XCTAssertEqual(longchain.all().count, 3);
+        }
+    }
 }

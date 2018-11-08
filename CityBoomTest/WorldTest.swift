@@ -62,9 +62,7 @@ class WorldTest: XCTestCase {
                            "sofia": City(4, "Sofia"),
                            "minsk": City(5, "Minsk")]);
         self.measure {
-            XCTAssertEqual(earth.getCitiesByFirstLetter("m"),
-                           Set<City>([City(1, "Moscow"),
-                                      City(5, "Minsk")]));
+            XCTAssertEqual(earth.getCitiesByFirstLetter("m").count, 2);
         }
     }
 
