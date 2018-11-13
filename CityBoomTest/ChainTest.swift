@@ -13,7 +13,7 @@ class ChainTest: XCTestCase {
     var chain = Chain()
 
     override func setUp() {
-        chain = Chain([2: City(2, "Sofia")])
+        chain = Chain([2: City(2, "Sofia")], last: 2);
     }
 
     func testIsNotCityUsed() {
@@ -46,7 +46,7 @@ class ChainTest: XCTestCase {
     func testPerformanceIsUsed() {
         let longchain = Chain([1: City(1, "Moscow"),
                            2: City(2, "Sofia"),
-                           3: City(3, "Irkutsk")]);
+                           3: City(3, "Irkutsk")], last: 3);
         self.measure {
             XCTAssertTrue(longchain.isUsed(City(2, "Sofia")));
         }
@@ -55,7 +55,7 @@ class ChainTest: XCTestCase {
     func testPerformanceAllCities() {
         let longchain = Chain([1: City(1, "Moscow"),
                               2: City(2, "Sofia"),
-                              3: City(3, "Irkutsk")]);
+                              3: City(3, "Irkutsk")], last: 3);
         self.measure {
             XCTAssertEqual(longchain.all().count, 3);
         }

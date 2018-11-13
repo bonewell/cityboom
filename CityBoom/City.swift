@@ -8,11 +8,13 @@
 
 import Foundation
 
-class City: Equatable, Hashable {
+struct City: Equatable, Hashable {
     let id: Int
     let name: String
     
     init(_ id: Int, _ name: String) {
+        assert(id > 0);
+        assert(!name.isEmpty);
         self.id = id;
         self.name = name;
     }

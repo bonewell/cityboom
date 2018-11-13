@@ -9,15 +9,16 @@
 import Foundation
 
 class Chain {
-    var lastId: Int = 0
-    var cities: [Int: City]
+    private var lastId = 0
+    var cities: [Int: City]  // TODO: private
     
     init() {
         cities = [:];
     }
     
-    init(_ cities: [Int: City]) {
+    init(_ cities: [Int: City], last lastId: Int) {
         self.cities = cities;
+        self.lastId = lastId;
     }
     
     func isUsed(_ city: City) -> Bool {
@@ -26,7 +27,7 @@ class Chain {
     
     func add(_ city: City) {
         lastId = city.id;
-        cities[city.id] = city;
+        cities[lastId] = city;
     }
     
     func last() -> City? {

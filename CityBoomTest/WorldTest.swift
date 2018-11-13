@@ -10,7 +10,7 @@ import XCTest
 @testable import CityBoom
 
 class WorldTest: XCTestCase {
-    var world = World([:])
+    var world = World(["empty": City(1, "Empty")])
 
     override func setUp() {
         world = World(["moscow": City(1, "Moscow")]);
@@ -25,24 +25,24 @@ class WorldTest: XCTestCase {
     }
     
     func testFindUnknownCity() {
-        XCTAssertNil(world.findCity("Majla"));
+        XCTAssertNil(world.find("Majla"));
     }
     
     func testFindKnownCity() {
-        XCTAssertEqual(world.findCity("Moscow")!, City(1, "Moscow"));
+        XCTAssertEqual(world.find("Moscow")!, City(1, "Moscow"));
     }
     
     func testGetCitiesByFirstLetter() {
         let earth = World(["moscow": City(1, "Moscow"),
                            "kiev": City(2, "Kiev")]);
-        XCTAssertEqual(earth.getCitiesByFirstLetter("m"),
+        XCTAssertEqual(earth.getByFirstLetter("m"),
                        Set<City>([City(1, "Moscow")]));
     }
     
     func testGetCitiesByFirstUpperLetter() {
         let earth = World(["moscow": City(1, "Moscow"),
                            "kiev": City(2, "Kiev")]);
-        XCTAssertEqual(earth.getCitiesByFirstLetter("M"),
+        XCTAssertEqual(earth.getByFirstLetter("M"),
                        Set<City>([City(1, "Moscow")]));
     }
 
@@ -55,14 +55,14 @@ class WorldTest: XCTestCase {
         }
     }
     
-    func testPerformanceGetCitiesByFirstUpperLetter() {
+    func testPerformanceGetByFirstLetter() {
         let earth = World(["moscow": City(1, "Moscow"),
                            "kiev": City(2, "Kiev"),
                            "irkutsk": City(3, "Irkutsk"),
                            "sofia": City(4, "Sofia"),
                            "minsk": City(5, "Minsk")]);
         self.measure {
-            XCTAssertEqual(earth.getCitiesByFirstLetter("m").count, 2);
+            XCTAssertEqual(earth.getByFirstLetter("m").count, 2);
         }
     }
 
