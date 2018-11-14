@@ -1,0 +1,31 @@
+@startuml
+actor User
+User -> CityBoom: input name
+CityBoom -> World: find(name)
+activate World
+World --> CityBoom: city
+deactivate World
+opt city is nil
+    CityBoom --> User: city doesn't exist
+end
+CityBoom -> Chain: isUsed(city)
+activate Chain
+Chain --> CityBoom: result
+deactivate Chain
+opt result is true
+    CityBoom --> User: city is already used
+end
+CityBoom -> Chain: last()
+activate Chain
+Chain --> CityBoom: last
+deactivate Chain
+CityBoom -> StitchInspector: verify(last, city)
+activate StitchInspector
+StitchInspector --> CityBoom: result
+deactivate StitchInspector
+opt result is false
+    CityBoom --> User: city is unsuited
+end
+CityBoom -> Chain: add(city)
+CityBoom --> User
+@enduml

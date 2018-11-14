@@ -1,0 +1,34 @@
+@startuml
+namespace CityBoom {
+    class World {
+        - cities: [String: City]
+        + isCity(name: String): Bool
+        + find(name: String): City
+        + random(): City
+        + getByFirstLetter(letter: Character): Set<City>
+    }
+    class City << (S,skyblue) >> {
+        + id: Int
+        + name: String
+    }
+    class Chain {
+        - lastId: Int
+        + cities: [Int, City]
+        + isUsed(city: City): Bool
+        + last(): City
+        + all(): Set<City>
+    }
+    class StitchInspector {
+        {static} + verify(last: City, next: City): Bool
+    }
+    class Intellect {
+        - world: World
+        + play(chain: Chain): City
+    }
+    World *- "1..*" City
+    World --o Intellect
+    Intellect .> Chain
+    City "0..*" --o Chain
+    City <. StitchInspector
+}
+@enduml

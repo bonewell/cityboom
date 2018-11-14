@@ -1,0 +1,28 @@
+@startuml
+CityBoom -> Intellect: play(chain)
+activate Intellect
+Intellect -> Chain: last()
+activate Chain
+Chain --> Intellect: city
+deactivate Chain
+alt last city is not nil
+    Intellect -> Intellect: letter = city.name.last
+    Intellect -> World: getByFirstLetter(letter)
+    activate World
+    World --> Intellect: cities
+    deactivate World
+    Intellect -> Chain: all()
+    activate Chain
+    Chain --> Intellect: used_cities
+    deactivate Chain
+    Intellect -> Intellect: city = random(cities - used_cities)
+else
+    Intellect -> World: random()
+    activate World
+    World --> Intellect: city
+    deactivate World
+end
+Intellect --> CityBoom: city
+deactivate Intellect
+CityBoom -> Chain: add(city)
+@enduml

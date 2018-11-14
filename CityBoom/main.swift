@@ -40,6 +40,7 @@ func next() -> Bool {
         print(city.name);
         return true;
     } else {
+        print("You win!");
         return false;
     }
 }
@@ -69,19 +70,17 @@ func process(_ name: String) -> Bool {
     }
 }
 
-start();
-while let name = readLine() {
+func exit(_ name: String) -> Bool {
     if name == "exit" {
         print("You lose!");
-        break;
+        return true;
     }
-    
-    if !process(name) {
-        continue;
-    }
+    return false;
+}
 
-    if !next() {
-        print("You win!");
+start();
+while let name = readLine(), !exit(name) {
+    if process(name) && !next() {
         break;
     }
 }

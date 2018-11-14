@@ -1,0 +1,13 @@
+@startuml
+actor User
+User -> CityBoom: Start
+CityBoom -> Computer: play
+Computer --> CityBoom: city
+CityBoom --> User
+loop
+    User -> CityBoom: Input name
+    CityBoom -> Computer: play
+    Computer --> CityBoom: city
+    CityBoom --> User
+end
+@enduml

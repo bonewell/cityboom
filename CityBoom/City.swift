@@ -13,8 +13,8 @@ struct City: Equatable, Hashable {
     let name: String
     
     init(_ id: Int, _ name: String) {
-        assert(id > 0);
-        assert(!name.isEmpty);
+        assert(id > 0, "Id should be greater than zero");
+        assert(!name.isEmpty, "Name should not be empty");
         self.id = id;
         self.name = name;
     }
