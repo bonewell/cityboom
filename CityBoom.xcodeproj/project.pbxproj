@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		F623339E218F8B7E00647BAA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F623339D218F8B7E00647BAA /* main.swift */; };
 		F62333AB218F8BA800647BAA /* WorldTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62333AA218F8BA800647BAA /* WorldTest.swift */; };
+		F6321F5B219F4BC1008C6F28 /* WorldStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6321F5A219F4BC1008C6F28 /* WorldStorage.swift */; };
+		F6321F5C219F4BC1008C6F28 /* WorldStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6321F5A219F4BC1008C6F28 /* WorldStorage.swift */; };
+		F6321F5E219F4BE1008C6F28 /* WorldStorageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6321F5D219F4BE1008C6F28 /* WorldStorageTest.swift */; };
 		F697F4B821920562006BC1FA /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FFFAAE2190DB2300CE9CE7 /* World.swift */; };
 		F697F4BC21920AB0006BC1FA /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = F697F4BB21920AB0006BC1FA /* City.swift */; };
 		F697F4BE219210D1006BC1FA /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = F697F4BB21920AB0006BC1FA /* City.swift */; };
@@ -42,6 +45,8 @@
 		F62333A8218F8BA800647BAA /* CityBoomTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityBoomTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F62333AA218F8BA800647BAA /* WorldTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTest.swift; sourceTree = "<group>"; };
 		F62333AC218F8BA800647BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6321F5A219F4BC1008C6F28 /* WorldStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldStorage.swift; sourceTree = "<group>"; };
+		F6321F5D219F4BE1008C6F28 /* WorldStorageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldStorageTest.swift; sourceTree = "<group>"; };
 		F697F4BB21920AB0006BC1FA /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		F697F4BF2192B424006BC1FA /* Chain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
 		F697F4C22192B450006BC1FA /* ChainTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainTest.swift; sourceTree = "<group>"; };
@@ -97,6 +102,7 @@
 				F697F4BF2192B424006BC1FA /* Chain.swift */,
 				F697F4C42193608D006BC1FA /* StitchInspector.swift */,
 				F697F4C92195FA9E006BC1FA /* Intellect.swift */,
+				F6321F5A219F4BC1008C6F28 /* WorldStorage.swift */,
 			);
 			path = CityBoom;
 			sourceTree = "<group>";
@@ -109,6 +115,7 @@
 				F697F4C22192B450006BC1FA /* ChainTest.swift */,
 				F697F4C7219360AC006BC1FA /* StitchInspectorTest.swift */,
 				F697F4CC2195FB0A006BC1FA /* IntellectTest.swift */,
+				F6321F5D219F4BE1008C6F28 /* WorldStorageTest.swift */,
 			);
 			path = CityBoomTest;
 			sourceTree = "<group>";
@@ -202,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F623339E218F8B7E00647BAA /* main.swift in Sources */,
+				F6321F5B219F4BC1008C6F28 /* WorldStorage.swift in Sources */,
 				F697F4C02192B424006BC1FA /* Chain.swift in Sources */,
 				F697F4CA2195FA9E006BC1FA /* Intellect.swift in Sources */,
 				F6FFFAAF2190DB2300CE9CE7 /* World.swift in Sources */,
@@ -216,6 +224,7 @@
 			files = (
 				F697F4C8219360AC006BC1FA /* StitchInspectorTest.swift in Sources */,
 				F697F4B821920562006BC1FA /* World.swift in Sources */,
+				F6321F5C219F4BC1008C6F28 /* WorldStorage.swift in Sources */,
 				F697F4CD2195FB0A006BC1FA /* IntellectTest.swift in Sources */,
 				F697F4C12192B424006BC1FA /* Chain.swift in Sources */,
 				F697F4C62193608D006BC1FA /* StitchInspector.swift in Sources */,
@@ -223,6 +232,7 @@
 				F697F4C32192B450006BC1FA /* ChainTest.swift in Sources */,
 				F697F4CB2195FA9E006BC1FA /* Intellect.swift in Sources */,
 				F697F4BE219210D1006BC1FA /* City.swift in Sources */,
+				F6321F5E219F4BE1008C6F28 /* WorldStorageTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,19 +11,8 @@ import Foundation
 print("This is a game about your knowledge of world cities.");
 print("Type exit to finish the game.");
 
-let world = World(["moscow": City(1, "Moscow"),
-                   "sofia": City(2, "Sofia"),
-                   "irkutsk": City(3, "Irkutsk"),
-                   "angarsk": City(4, "Angarsk"),
-                   "kiev": City(5, "Kiev"),
-                   "kursk": City(6, "Kursk"),
-                   "volgograd": City(7, "Volgograd"),
-                   "varna": City(8, "Varna"),
-                   "paris": City(9, "Paris"),
-                   "london": City(10, "London"),
-                   "berlin": City(11, "Berlin"),
-                   "minsk": City(12, "Minsk"),
-                   "warsaw": City(13, "Warsaw")]);
+let str = try String(contentsOf: URL(fileURLWithPath: "cityboom.csv"));
+let world = World(WorldStorage.read(str));
 var chain = Chain();
 let inspector = StitchInspector();
 let intellect = Intellect(world);

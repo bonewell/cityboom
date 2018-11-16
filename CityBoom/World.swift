@@ -21,7 +21,14 @@ class World {
     }
     
     func find(_ name: String) -> City? {
-        return cities[name.lowercased()];
+        let code = name.lowercased()
+            .replacingOccurrences(of: "st.", with: "saint")
+            .replacingOccurrences(of: " ", with: "")
+            .replacingOccurrences(of: "`", with: "")
+            .replacingOccurrences(of: ".", with: "")
+            .replacingOccurrences(of: "-", with: "")
+            .replacingOccurrences(of: "'", with: "");
+        return cities[code];
     }
     
     func getByFirstLetter(_ letter: Character) -> Set<City> {

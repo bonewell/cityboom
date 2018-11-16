@@ -28,6 +28,12 @@ class WorldTest: XCTestCase {
         XCTAssertNil(world.find("Majla"));
     }
     
+    func testFindCityWithSpecialSimbols() {
+        let name = "St. New`Area-Place.S'ee";
+        let earth = World(["saintnewareaplacesee": City(1, name)]);
+        XCTAssertEqual(earth.find("St. New`Area-Place.S'ee"), City(1, name));
+    }
+    
     func testFindKnownCity() {
         XCTAssertEqual(world.find("Moscow")!, City(1, "Moscow"));
     }
