@@ -10,7 +10,13 @@ import Foundation
 
 class Chain {
     private var lastId = 0
-    var cities: [Int: City]  // TODO: private
+    private var cities: [Int: City]
+    // citylist is just used for unit tests
+    internal var citylist: [Int: City] {
+        get {
+            return cities;
+        }
+    }
     
     init() {
         cities = [:];
@@ -20,7 +26,7 @@ class Chain {
         self.cities = cities;
         self.lastId = lastId;
     }
-    
+
     func isUsed(_ city: City) -> Bool {
         return cities[city.id] != nil;
     }
