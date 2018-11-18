@@ -34,7 +34,7 @@ class World {
     func getByFirstLetter(_ letter: Character) -> Set<City> {
         let letterLowercased: Character? = String(letter).lowercased().first;
 
-        let cities = self.cities.filter({(key, _) -> Bool in
+        let cities = self.cities.filter({(key, _) in
             return key.first == letter || key.first == letterLowercased;
         });
 

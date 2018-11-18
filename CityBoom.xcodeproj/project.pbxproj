@@ -24,6 +24,12 @@
 		F697F4CA2195FA9E006BC1FA /* Intellect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F697F4C92195FA9E006BC1FA /* Intellect.swift */; };
 		F697F4CB2195FA9E006BC1FA /* Intellect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F697F4C92195FA9E006BC1FA /* Intellect.swift */; };
 		F697F4CD2195FB0A006BC1FA /* IntellectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F697F4CC2195FB0A006BC1FA /* IntellectTest.swift */; };
+		F6D0D74D21A16F890063FD52 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0D74C21A16F890063FD52 /* Game.swift */; };
+		F6D0D74E21A16F890063FD52 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0D74C21A16F890063FD52 /* Game.swift */; };
+		F6D0D75021A16FAA0063FD52 /* GameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0D74F21A16FAA0063FD52 /* GameTest.swift */; };
+		F6D0D75221A1BC0D0063FD52 /* IntellectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0D75121A1BC0D0063FD52 /* IntellectProtocol.swift */; };
+		F6D0D75321A1BC0D0063FD52 /* IntellectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0D75121A1BC0D0063FD52 /* IntellectProtocol.swift */; };
+		F6D0D75521A1BCD10063FD52 /* FakeIntellect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0D75421A1BCD10063FD52 /* FakeIntellect.swift */; };
 		F6FFFAAF2190DB2300CE9CE7 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FFFAAE2190DB2300CE9CE7 /* World.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +60,10 @@
 		F697F4C7219360AC006BC1FA /* StitchInspectorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StitchInspectorTest.swift; sourceTree = "<group>"; };
 		F697F4C92195FA9E006BC1FA /* Intellect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intellect.swift; sourceTree = "<group>"; };
 		F697F4CC2195FB0A006BC1FA /* IntellectTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntellectTest.swift; sourceTree = "<group>"; };
+		F6D0D74C21A16F890063FD52 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		F6D0D74F21A16FAA0063FD52 /* GameTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTest.swift; sourceTree = "<group>"; };
+		F6D0D75121A1BC0D0063FD52 /* IntellectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntellectProtocol.swift; sourceTree = "<group>"; };
+		F6D0D75421A1BCD10063FD52 /* FakeIntellect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeIntellect.swift; sourceTree = "<group>"; };
 		F6FFFAAE2190DB2300CE9CE7 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +113,8 @@
 				F697F4C42193608D006BC1FA /* StitchInspector.swift */,
 				F697F4C92195FA9E006BC1FA /* Intellect.swift */,
 				F6321F5A219F4BC1008C6F28 /* WorldStorage.swift */,
+				F6D0D74C21A16F890063FD52 /* Game.swift */,
+				F6D0D75121A1BC0D0063FD52 /* IntellectProtocol.swift */,
 			);
 			path = CityBoom;
 			sourceTree = "<group>";
@@ -116,6 +128,8 @@
 				F697F4C7219360AC006BC1FA /* StitchInspectorTest.swift */,
 				F697F4CC2195FB0A006BC1FA /* IntellectTest.swift */,
 				F6321F5D219F4BE1008C6F28 /* WorldStorageTest.swift */,
+				F6D0D74F21A16FAA0063FD52 /* GameTest.swift */,
+				F6D0D75421A1BCD10063FD52 /* FakeIntellect.swift */,
 			);
 			path = CityBoomTest;
 			sourceTree = "<group>";
@@ -215,6 +229,8 @@
 				F6FFFAAF2190DB2300CE9CE7 /* World.swift in Sources */,
 				F697F4C52193608D006BC1FA /* StitchInspector.swift in Sources */,
 				F697F4BC21920AB0006BC1FA /* City.swift in Sources */,
+				F6D0D75221A1BC0D0063FD52 /* IntellectProtocol.swift in Sources */,
+				F6D0D74D21A16F890063FD52 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D0D75521A1BCD10063FD52 /* FakeIntellect.swift in Sources */,
 				F697F4C8219360AC006BC1FA /* StitchInspectorTest.swift in Sources */,
 				F697F4B821920562006BC1FA /* World.swift in Sources */,
 				F6321F5C219F4BC1008C6F28 /* WorldStorage.swift in Sources */,
@@ -229,8 +246,11 @@
 				F697F4C12192B424006BC1FA /* Chain.swift in Sources */,
 				F697F4C62193608D006BC1FA /* StitchInspector.swift in Sources */,
 				F62333AB218F8BA800647BAA /* WorldTest.swift in Sources */,
+				F6D0D74E21A16F890063FD52 /* Game.swift in Sources */,
+				F6D0D75321A1BC0D0063FD52 /* IntellectProtocol.swift in Sources */,
 				F697F4C32192B450006BC1FA /* ChainTest.swift in Sources */,
 				F697F4CB2195FA9E006BC1FA /* Intellect.swift in Sources */,
+				F6D0D75021A16FAA0063FD52 /* GameTest.swift in Sources */,
 				F697F4BE219210D1006BC1FA /* City.swift in Sources */,
 				F6321F5E219F4BE1008C6F28 /* WorldStorageTest.swift in Sources */,
 			);

@@ -27,19 +27,11 @@ class IntellectTest: XCTestCase {
         XCTAssertEqual(intellect.play(chain), City(1, "Irkutsk"));
     }
     
-    func testGameOf() {
+    func testPlayNil() {
         let world = World(["irkutsk": City(1, "Irkutsk")]);
         let intellect = Intellect(world);
         
         let chain = Chain([1: City(1, "Irkutsk")], last: 1);
         XCTAssertNil(intellect.play(chain));
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

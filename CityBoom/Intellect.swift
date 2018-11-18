@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Intellect {
+class Intellect: IntellectProtocol {
     private let world: World
 
     init(_ world: World) {
