@@ -8,7 +8,7 @@
 
 import Foundation
 
-class StitchInspector {
+struct StitchInspector {
     static func verify(last: City, next: City) -> Bool {
         return last.name.lowercased().last == next.name.lowercased().first;
     }

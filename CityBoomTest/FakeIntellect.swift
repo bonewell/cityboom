@@ -11,7 +11,7 @@ import Foundation
 class FakeIntellect: IntellectProtocol {
     var city: City?
 
-    func play(_ chain: Chain) -> City? {
+    func play(_ chain: ChainProtocol) -> City? {
         return city;
     }
 }

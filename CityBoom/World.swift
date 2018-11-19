@@ -8,7 +8,7 @@
 
 import Foundation
 
-class World {
+class World: WorldProtocol {
     private let cities: [String: City]
     
     init(_ cities: [String: City]) {
@@ -42,6 +42,6 @@ class World {
     }
     
     func random() -> City {
-        return cities.randomElement()!.value;
+        return self.cities.randomElement()!.value;
     }
 }

@@ -10,28 +10,29 @@ import XCTest
 @testable import CityBoom
 
 class IntellectTest: XCTestCase {
-    func testPlay() {
-        let world = World(["kiev": City(1, "Kiev"),
-                           "minsk": City(2, "Minsk")]);
-        let intellect = Intellect(world);
+    let fakeWorld = FakeWorld()
+    let fakeChain = FakeChain()
+    var intellect: Intellect?
 
-        let chain = Chain([2: City(2, "Minsk")], last: 2);
-        XCTAssertEqual(intellect.play(chain), City(1, "Kiev"));
+    override func setUp() {
+        intellect = Intellect(fakeWorld);
+    }
+
+    func testPlay() {
+        fakeWorld.city = City(1, "Kiev");
+        fakeChain.city = City(2, "Minsk");
+        XCTAssertEqual(intellect!.play(fakeChain), City(1, "Kiev"));
     }
     
     func testPlayFirst() {
-        let world = World(["irkutsk": City(1, "Irkutsk")]);
-        let intellect = Intellect(world);
-
-        let chain = Chain();
-        XCTAssertEqual(intellect.play(chain), City(1, "Irkutsk"));
+        fakeWorld.city = City(1, "Irkutsk");
+        fakeChain.city = nil;
+        XCTAssertEqual(intellect!.play(fakeChain), City(1, "Irkutsk"));
     }
     
     func testPlayNil() {
-        let world = World(["irkutsk": City(1, "Irkutsk")]);
-        let intellect = Intellect(world);
-        
-        let chain = Chain([1: City(1, "Irkutsk")], last: 1);
-        XCTAssertNil(intellect.play(chain));
+        fakeWorld.city = nil;
+        fakeChain.city = City(1, "Irkutsk");
+        XCTAssertNil(intellect!.play(fakeChain));
     }
 }

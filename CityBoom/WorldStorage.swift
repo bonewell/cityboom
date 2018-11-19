@@ -8,7 +8,7 @@
 
 import Foundation
 
-class WorldStorage {
+struct WorldStorage {
     static func read(_ text: String) -> [String: City] {
         var cities = [String: City]()
         let lines = text.split(separator: "\r\n");

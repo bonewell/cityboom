@@ -1,5 +1,5 @@
 //
-//  IntellectProtocol.swift
+//  ChainProtocol.swift
 //  CityBoom
 //
 //  Created by Константин Колодий on 18/11/2018.
@@ -8,6 +8,9 @@
 
 import Foundation
 
-protocol IntellectProtocol {
-    func play(_ chain: ChainProtocol) -> City?
+protocol ChainProtocol {
+    func add(_ city: City)
+    func last() -> City?
+    func all() -> Set<City>
+    func isUsed(_ city: City) -> Bool
 }

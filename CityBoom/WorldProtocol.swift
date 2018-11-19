@@ -1,5 +1,5 @@
 //
-//  IntellectProtocol.swift
+//  WorldProtocol.swift
 //  CityBoom
 //
 //  Created by Константин Колодий on 18/11/2018.
@@ -8,6 +8,8 @@
 
 import Foundation
 
-protocol IntellectProtocol {
-    func play(_ chain: ChainProtocol) -> City?
+protocol WorldProtocol {
+    func find(_ name: String) -> City?
+    func getByFirstLetter(_ letter: Character) -> Set<City>
+    func random() -> City
 }

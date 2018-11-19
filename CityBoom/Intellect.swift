@@ -9,13 +9,13 @@
 import Foundation
 
 class Intellect: IntellectProtocol {
-    private let world: World
+    private let world: WorldProtocol
 
-    init(_ world: World) {
+    init(_ world: WorldProtocol) {
         self.world = world;
     }
 
-    func play(_ chain: Chain) -> City? {
+    func play(_ chain: ChainProtocol) -> City? {
         if let city = chain.last() {
             let posible = world.getByFirstLetter(city.name.last!);
             return posible.subtracting(chain.all()).randomElement();

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Chain {
+class Chain: ChainProtocol {
     private var lastId = 0
     private var cities: [Int: City]
     // citylist is just used for unit tests
