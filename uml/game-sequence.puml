@@ -1,13 +1,12 @@
 @startuml
 actor User
-User -> CityBoom: Start
-CityBoom -> Computer: play
-Computer --> CityBoom: city
-CityBoom --> User
+User -> CityBoom: start
 loop
-    User -> CityBoom: Input name
-    CityBoom -> Computer: play
-    Computer --> CityBoom: city
-    CityBoom --> User
+    CityBoom -> Game: go()
+    Game --> CityBoom: city
+    CityBoom --> User: wait input
+    User -> CityBoom: name
+    CityBoom -> Game: examine(name)
+    Game --> CityBoom: city
 end
 @enduml

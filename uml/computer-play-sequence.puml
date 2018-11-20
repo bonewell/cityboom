@@ -1,5 +1,7 @@
 @startuml
-CityBoom -> Intellect: play(chain)
+CityBoom -> Game: go()
+activate Game
+Game -> Intellect: play(chain)
 activate Intellect
 Intellect -> Chain: last()
 activate Chain
@@ -22,7 +24,9 @@ else
     World --> Intellect: city
     deactivate World
 end
-Intellect --> CityBoom: city
+Intellect --> Game: city
 deactivate Intellect
-CityBoom -> Chain: add(city)
+Game -> Chain: add(city)
+Game --> CityBoom: city
+deactivate Game
 @enduml

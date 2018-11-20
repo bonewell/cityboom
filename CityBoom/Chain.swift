@@ -13,9 +13,7 @@ class Chain: ChainProtocol {
     private var cities: [Int: City]
     // citylist is just used for unit tests
     internal var citylist: [Int: City] {
-        get {
-            return cities;
-        }
+        return cities;
     }
     
     init() {

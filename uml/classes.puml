@@ -1,34 +1,66 @@
 @startuml
 namespace CityBoom {
-    class World {
-        - cities: [String: City]
+    class Game {
+        - world: WorldProtocol
+        - intellect: IntellectProtocol
+        - chain: ChainProtocol
+        + init(world, intellect, chain)
+        + go(): (Bool, String)
+        + examine(name: String): (Bool, String)
+    }
+    interface WorldProtocol {
         + isCity(name: String): Bool
         + find(name: String): City
         + random(): City
         + getByFirstLetter(letter: Character): Set<City>
     }
-    class City << (S,skyblue) >> {
-        + id: Int
-        + name: String
+    interface IntellectProtocol {
+        + play(chain: Chain): City
     }
-    class Chain {
-        - lastId: Int
-        + cities: [Int, City]
+    interface ChainProtocol {
         + isUsed(city: City): Bool
         + last(): City
         + all(): Set<City>
     }
+    class World {
+        - cities: [String: City]
+        + init(cities: [String: City])
+    }
+    class Intellect {
+        - world: WorldProtocol
+        + init(world)
+    }
+    class Chain {
+        - lastId: Int
+        - cities: [Int, City]
+        + init()
+        + init(cities: [Int, City], last: Int)
+
+    }
     class StitchInspector {
         {static} + verify(last: City, next: City): Bool
     }
-    class Intellect {
-        - world: World
-        + play(chain: Chain): City
+    class City << (S,skyblue) >> {
+        + id: Int
+        + name: String
+        + init(id: Int, name: String)
     }
-    World *- "1..*" City
-    World --o Intellect
+    class WorldStorage {
+        {static} + read(text: String): [String: City]
+    }
+
+    Game o-- "1" WorldProtocol
+    Game o-- "1" IntellectProtocol
+    Game o-- "1" ChainProtocol
+    WorldProtocol <|.. World
+    IntellectProtocol <|.. Intellect
+    ChainProtocol <|.. Chain
+    World -o Intellect
     Intellect .> Chain
-    City "0..*" --o Chain
-    City <. StitchInspector
+    World *-- "1..*" City
+    Chain *-- "0..*" City
+    Game .> StitchInspector
+    WorldStorage .> City: create
+'    City <.. WorldStorage: create
 }
 @enduml

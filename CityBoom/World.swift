@@ -34,14 +34,14 @@ class World: WorldProtocol {
     func getByFirstLetter(_ letter: Character) -> Set<City> {
         let letterLowercased: Character? = String(letter).lowercased().first;
 
-        let cities = self.cities.filter({(key, _) in
+        let filtered = cities.filter({(key, _) in
             return key.first == letter || key.first == letterLowercased;
         });
 
-        return Set<City>(cities.values);
+        return Set<City>(filtered.values);
     }
     
     func random() -> City {
-        return self.cities.randomElement()!.value;
+        return cities.randomElement()!.value;
     }
 }
