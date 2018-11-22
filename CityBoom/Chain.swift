@@ -10,11 +10,7 @@ import Foundation
 
 class Chain: ChainProtocol {
     private var lastId = 0
-    private var cities: [Int: City]
-    // citylist is just used for unit tests
-    internal var citylist: [Int: City] {
-        return cities;
-    }
+    private(set) var cities: [Int: City]
     
     init() {
         cities = [:];

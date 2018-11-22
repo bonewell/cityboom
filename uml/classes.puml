@@ -61,6 +61,5 @@ namespace CityBoom {
     Chain *-- "0..*" City
     Game .> StitchInspector
     WorldStorage .> City: create
-'    City <.. WorldStorage: create
 }
 @enduml

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct City: Equatable, Hashable {
+struct City: Hashable {
     let id: Int
     let name: String
     
@@ -17,10 +17,6 @@ struct City: Equatable, Hashable {
         assert(!name.isEmpty, "Name should not be empty");
         self.id = id;
         self.name = name;
-    }
-
-    static func == (lhs: City, rhs: City) -> Bool {
-        return lhs.id == rhs.id && lhs.name == rhs.name;
     }
     
     func hash(into hasher: inout Hasher) {
