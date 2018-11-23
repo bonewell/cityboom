@@ -16,12 +16,12 @@ class WorldTest: XCTestCase {
         world = World(["moscow": City(1, "Moscow")]);
     }
 
-    func testIsMoscowCity() {
-        XCTAssertTrue(world.isCity("Moscow"));
+    func testFindMoscowCity() {
+        XCTAssertEqual(world.find("Moscow"), City(1, "Moscow"));
     }
     
     func testInsensitiveCaseOfName() {
-        XCTAssertTrue(world.isCity("moscow"));
+        XCTAssertEqual(world.find("moscow"), City(1, "Moscow"));
     }
     
     func testFindUnknownCity() {
@@ -57,7 +57,7 @@ class WorldTest: XCTestCase {
                            "irkutsk": City(2, "Irkutsk"),
                            "sofia": City(3, "Sofia")])
         self.measure {
-            XCTAssertTrue(earth.isCity("Irkutsk"));
+            XCTAssertNotNil(earth.find("Irkutsk"));
         }
     }
     

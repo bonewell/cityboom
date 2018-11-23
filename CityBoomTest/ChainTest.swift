@@ -27,7 +27,7 @@ class ChainTest: XCTestCase {
     func testAddCity() {
         chain.add(City(3, "Irkutsk"));
         XCTAssertEqual(chain.cities, [2: City(2, "Sofia"),
-                                        3: City(3, "Irkutsk")]);
+                                      3: City(3, "Irkutsk")]);
     }
     
     func testGetLast() {

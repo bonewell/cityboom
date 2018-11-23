@@ -8,7 +8,12 @@
 
 import Foundation
 
+/// Represents a persistent storage of the world.
 struct WorldStorage {
+    /// Reads a world from CSV text.
+    ///
+    /// - Parameter text: CSV text.
+    /// - Returns: dictionary of the cities.
     static func read(_ text: String) -> [String: City] {
         var cities = [String: City]()
         let lines = text.split(separator: "\r\n");
