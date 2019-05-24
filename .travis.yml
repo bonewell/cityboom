@@ -2,5 +2,5 @@ os: osx
 osx_image: xcode10.2
 language: swift
 xcode_project: CityBoom.xcodeproj
-xcode_scheme: CityBoomTest
+xcode_scheme: CityBoom
 xcode-destination: platform=macOS
