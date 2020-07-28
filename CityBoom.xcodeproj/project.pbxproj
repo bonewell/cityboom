@@ -197,9 +197,11 @@
 				TargetAttributes = {
 					F6233399218F8B7E00647BAA = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1160;
 					};
 					F62333A7218F8BA800647BAA = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
@@ -401,7 +403,7 @@
 				DEVELOPMENT_TEAM = DR9KB93G46;
 				INFOPLIST_FILE = "$(SRCROOT)/CityBoomTest/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -412,7 +414,7 @@
 				DEVELOPMENT_TEAM = DR9KB93G46;
 				INFOPLIST_FILE = "$(SRCROOT)/CityBoomTest/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -430,7 +432,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Bone.Well.CityBoomTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -448,7 +450,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Bone.Well.CityBoomTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
