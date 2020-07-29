@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F623339E218F8B7E00647BAA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F623339D218F8B7E00647BAA /* main.swift */; };
 		F62333AB218F8BA800647BAA /* WorldTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62333AA218F8BA800647BAA /* WorldTest.swift */; };
+		F62717E724D16883006EEB79 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62717E624D16883006EEB79 /* Chat.swift */; };
 		F6321F5B219F4BC1008C6F28 /* WorldStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6321F5A219F4BC1008C6F28 /* WorldStorage.swift */; };
 		F6321F5C219F4BC1008C6F28 /* WorldStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6321F5A219F4BC1008C6F28 /* WorldStorage.swift */; };
 		F6321F5E219F4BE1008C6F28 /* WorldStorageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6321F5D219F4BE1008C6F28 /* WorldStorageTest.swift */; };
@@ -57,6 +58,7 @@
 		F62333A8218F8BA800647BAA /* CityBoomTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityBoomTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F62333AA218F8BA800647BAA /* WorldTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTest.swift; sourceTree = "<group>"; };
 		F62333AC218F8BA800647BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F62717E624D16883006EEB79 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		F6321F5A219F4BC1008C6F28 /* WorldStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldStorage.swift; sourceTree = "<group>"; };
 		F6321F5D219F4BE1008C6F28 /* WorldStorageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldStorageTest.swift; sourceTree = "<group>"; };
 		F697F4BB21920AB0006BC1FA /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				F6D0D75121A1BC0D0063FD52 /* IntellectProtocol.swift */,
 				F6D0D75621A1C7CC0063FD52 /* ChainProtocol.swift */,
 				F6D0D75B21A1F37C0063FD52 /* WorldProtocol.swift */,
+				F62717E624D16883006EEB79 /* Chat.swift */,
 			);
 			path = CityBoom;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F623339E218F8B7E00647BAA /* main.swift in Sources */,
+				F62717E724D16883006EEB79 /* Chat.swift in Sources */,
 				F6321F5B219F4BC1008C6F28 /* WorldStorage.swift in Sources */,
 				F697F4C02192B424006BC1FA /* Chain.swift in Sources */,
 				F697F4CA2195FA9E006BC1FA /* Intellect.swift in Sources */,
